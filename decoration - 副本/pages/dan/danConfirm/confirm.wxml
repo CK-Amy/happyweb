@@ -1,8 +1,0 @@
-<!--pages/dan/danConfirm/confirm.wxml-->
-<view class="gallery_bottom">
-  <navigator url="url">
-    <view class="findhim">
-      找他设计
-    </view>
-  </navigator>
-</view>

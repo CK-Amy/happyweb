@@ -1,0 +1,92 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+    <title>grid</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        #selectAge {
+            width: 400px;
+        }
+        div.hidehaha {
+            width: 80%;
+            height: 200px;
+            border: 1px solid #ddd;
+            padding:1rem 0 1rem 1rem;
+            overflow-y: auto;
+            /*display:flex;*/
+            /*flex-direction: row;*/
+            /*flex-wrap: wrap;*/
+        }
+        /*.hidehaha>option{*/
+            /*font-size:1.3rem;*/
+            /*margin-right:0.5rem;*/
+            /*padding-right:0.5rem;*/
+            /*border-right:1px solid #ddd;*/
+            /*height:30px;*/
+        /*}*/
+        .li_flex{
+            list-style: none;
+            display:flex;
+            flex-wrap: wrap;
+        }
+        ul>li{
+           /*width:40px;*/
+            font-size:1.3rem;
+            margin-right:0.5rem;
+            padding-right:0.5rem;
+            border-right:1px solid #ddd;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="select">
+    <input type="text" name="selectAge" id="selectAge">
+    <select name="gun" id="gun"></select>
+    <div class="hidehaha">
+        <ul class="li_flex">
+            <li>
+                    桌桌是一个可爱的兔几
+
+            </li>
+            <li>
+                桌桌是一个可爱的兔几
+
+            </li>
+            <li>
+                桌桌是一个可爱的兔几
+
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+
+
+</body>
+<script src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".hidehaha").hide();
+        $("#selectAge").focus(function () {
+            $(".hidehaha").slideDown("slow");
+//            onmouseover="this.style.cursor='hand'"
+            $("li").css("cursor","pointer");
+        });
+        $("#selectAge").blur(function () {
+            $(".hidehaha").slideUp("slow");
+        });
+//            试试cookie，用js写个方法，把选择option之后的value之类的信息写入到cookie中，
+//            再添加个window.onload = function(){...};在页面加载是调用cookie来给input赋值
+    });
+    $("li").click(function () {
+        var list = $(this).html();
+        $("#selectAge").val(list)
+    });
+</script>
+</html> 

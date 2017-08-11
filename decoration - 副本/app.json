@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/dan/danAddress/address",
+    "pages/index/index",
+    "pages/aaa/aaa",
+    "pages/fonts",
+    "pages/decoration/case/case",
+    "pages/decoration/gallery/gallery",
+    "pages/decoration/guide/guide",
+
+    "pages/detail/casedetail/casedetail",
+    "pages/detail/gallerydetail/gallerydetail",
+    "pages/detail/guidedetail/guidedetail",
+    "pages/dan/danDetail/detail",
+    "pages/dan/danConfirm/confirm"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#343237",
+    "navigationBarTitleText": "装修公司",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#C7C7C7",
+    "selectedColor": "#61DAD4",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/tab_home_btn_default@2x.png",
+        "selectedIconPath": "pages/images/tab_home_btn_select@2x.png"
+      },
+      {
+        "pagePath": "pages/aaa/aaa",
+        "text": "分类",
+        "iconPath": "pages/images/tab_fenlei_btn_default@2x.png",
+        "selectedIconPath": "pages/images/tab_fenlei_btn_select@2x.png"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "text": "发标",
+        "iconPath": "pages/images/tab_fabiao_btn_default@2x.png",
+        "selectedIconPath": "pages/images/tab_fabiao_btn_default@2x.png"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "text": "互动",
+        "iconPath": "pages/images/tab_hudong_btn_default@2x.png",
+        "selectedIconPath": "pages/images/tab_hudong_btn_select@2x.png"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "text": "个人中心",
+        "iconPath": "pages/images/tab_gerenzhongxin_btn_default@2x.png",
+        "selectedIconPath": "pages/images/tab_gerenzhongxin_btn_select@2x.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 100000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  },
+  "debug": true
+}

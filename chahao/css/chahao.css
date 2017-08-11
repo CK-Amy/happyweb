@@ -1,0 +1,110 @@
+span{
+    display:inline-block;
+    width:100px;
+    height:30px;
+    position:relative;
+}
+/* 设置第一个图标 */
+#span .icon-cross{
+    right:10px;
+}
+#span1 .icon-cross::before,
+#span1 .icon-cross::after{
+    background: #f00;
+}
+/*!* 设置第二个图标 *!*/
+#span2 .icon-ranklist{
+    left:10px;
+    background: #f25d8e;
+}
+/* 设置第三个图标 */
+#span3 .icon-search{
+    right:10px;
+    border-color: #00a1d6;
+}
+#span3:hover .icon-search{
+    border-color: #f25d8e;
+}
+
+/*----图标大小为20px*20px，已经设置好在父元素中垂直居中，
+只需另外设置left或者right来调整水平位置----*/
+
+/*----通用设置----*/
+[class|=icon]{  /*所有类名以“icon-”开头的*/
+    width: 20px;
+    height: 20px;
+    top: 50%;  /*上边距为父元素50%*/
+    margin-top: -10px;  /*再往上移动自身高度一半，就垂直居中了*/
+    position: absolute;  /*有些图标高度不是20px，那么margin-top要单独设置*/
+}
+
+[class|=icon]::before,  /*所有类名以“icon-”开头的伪元素*/
+[class|=icon]::after{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+/*---------叉号---------*/
+.icon-cross::before,
+.icon-cross::after{
+    height: 16px;
+    width: 1.5px;
+    top: 2px;
+    right: 9px; /*设置right和top使叉号居中*/
+    border-radius: 1px;
+}
+.icon-cross::before{
+    transform: rotate(45deg);
+}
+.icon-cross::after{
+    transform: rotate(-45deg);
+}
+
+/*----------排行榜----------*/
+.icon-ranklist,
+.icon-ranklist::before,
+.icon-ranklist::after{
+    width: 4px;
+    border-radius: 1px;
+}
+.icon-ranklist::before,
+.icon-ranklist::after{
+    bottom: 0;
+    background: inherit;
+}
+.icon-ranklist{
+    height: 18px;
+    margin-top: -9px;
+    margin-left: 8px;
+    margin-right: 8px;  /*这样排行榜图标宽度可以当作20px*/
+}
+.icon-ranklist::before{
+    height: 12px;
+    left: -6px;
+}
+.icon-ranklist::after{
+    height: 10px;
+    right: -6px;
+}
+
+/*!*----------搜索图标----------*!*/
+.icon-search::before{
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    border: 2px solid;
+    top: 1px;
+    left: 1px;
+    border-color: inherit;
+}
+.icon-search::after{
+    height: 7px;
+    border-left: 1.5px solid;
+    border-right: 1.5px solid;
+    border-radius: 1.5px;
+    right: 3px;
+    bottom: 0px;
+    transform: rotate(-45deg);
+    border-color: inherit;
+}

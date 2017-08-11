@@ -1,0 +1,207 @@
+ <view class="container">
+ <view class="page__bd">
+   <view class="search">
+      <form class="search_form" bindsubmit="searchSubmit">
+    <input value="{{search.searchValue}}" placeholder="搜索关键字" class="search_input" bindfocus="focusSearch" bindinput="searchActiveChangeinput" auto-focus="true" name="teamSearchKeyWords" />
+    <view class="search_icon search_active" style="width:40rpx;">
+      <icon type="search" size="13" color="#888" class="icon"></icon>
+    </view>
+  </form>
+   </view>
+
+    <view class="section section_gap swiper">
+      <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" 
+        duration="{{duration}}">
+        <block wx:for="{{backgroundImage}}">
+          <swiper-item>
+            <image src="{{item}}" class="slider-image"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+</view>
+<!--分类标头部分-->
+<view class="classify_box">
+  <view class="classify">
+    <image src="../images/home_toubiao_btn@2x.png" class="classify_pic"></image>
+    <text class="classify_text">投标</text>
+  </view>
+  <view class="classify">
+    <image src="../images/home_zhaorencai_btn@2x.png" class="classify_pic"></image>
+    <text class="classify_text">找人才</text>
+  </view>
+  <view class="classify">
+    <image src="../images/home_jiazheng_btn@2x.png" class="classify_pic"></image>
+    <text class="classify_text">家政服务</text>
+  </view>
+  <view class="classify">
+    <image src="../images/home_zhuangxiu_btn@2x.png" class="classify_pic"></image>
+    <text class="classify_text">装修服务</text>
+  </view>
+  <view class="classify">
+    <image src="../images/home_toubiao_btn@2x.png" class="classify_pic"></image>
+    <text class="classify_text">投标</text>
+  </view>
+  <view class="classify">
+    <image src="../images/home_zhaorencai_btn@2x.png" class="classify_pic"></image>
+    <text class="classify_text">找人才</text>
+  </view>
+  <view class="classify">
+    <image src="../images/home_jiazheng_btn@2x.png" class="classify_pic"></image>
+    <text class="classify_text">家政服务</text>
+  </view>
+  <view class="classify">
+    <image src="../images/home_zhuangxiu_btn@2x.png" class="classify_pic"></image>
+    <text class="classify_text">装修服务</text>
+  </view>
+</view>
+<!--装修案例-->
+<view class="case_box">
+<view class="case">
+  <view class="case_title">
+    <text>装修案例</text>
+    <navigator url="../decoration/case/case">更多></navigator>
+  </view>
+  <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" class="cases_scroll">
+    <!--  display: inline-block-->
+    
+  <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/case/case">
+      <image src="../images/decoration_pic1.png" class="slider_image"></image>
+      
+      <text class="text">60㎡/简约/一居/半包</text>
+      <text class="text_small">辽宁沈阳 雍景豪城</text>
+    </navigator>
+  </view>
+   <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/case/case">
+      <image src="../images/decoration_pic2.png" class="slider_image"></image>
+      
+      <text class="text">60㎡/简约/一居/半包</text>
+      <text class="text_small">辽宁沈阳 雍景豪城</text>
+    </navigator>
+  </view>
+   <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/case/case">
+      <image src="../images/decoration_pic3.png" class="slider_image"></image>
+      
+      <text class="text">60㎡/简约/一居/半包</text>
+      <text class="text_small">辽宁沈阳 雍景豪城</text>
+    </navigator>
+  </view>
+  <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/case/case">
+      <image src="../images/decoration_pic4.png" class="slider_image"></image>
+      
+      <text class="text">60㎡/简约/一居/半包</text>
+      <text class="text_small">辽宁沈阳 雍景豪城</text>
+    </navigator>
+  </view>
+   <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/case/case">
+      <image src="../images/decoration_pic5.png" class="slider_image"></image>
+      
+      <text class="text">60㎡/简约/一居/半包</text>
+      <text class="text_small">辽宁沈阳 雍景豪城</text>
+    </navigator>
+  </view>
+</scroll-view>
+ </view>
+
+ <view class="case">
+  <view class="case_title">
+    <text>装修图库</text>
+    <navigator url="../decoration/gallery/gallery">更多></navigator>
+  </view>
+  <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" class="cases_scroll">
+    <!--  display: inline-block-->
+    
+  <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/gallery/gallery">
+      <image src="../images/decoration_pic5.png" class="slider_image"></image>
+      
+      <text class="text">60㎡/简约/一居/半包</text>
+      <text class="text_small">辽宁沈阳 雍景豪城</text>
+    </navigator>
+  </view>
+   <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/gallery/gallery">
+      <image src="../images/decoration_pic4.png" class="slider_image"></image>
+      
+      <text class="text">60㎡/简约/一居/半包</text>
+      <text class="text_small">辽宁沈阳 雍景豪城</text>
+    </navigator>
+  </view>
+   <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/gallery/gallery">
+      <image src="../images/decoration_pic3.png" class="slider_image"></image>
+      
+      <text class="text">60㎡/简约/一居/半包</text>
+      <text class="text_small">辽宁沈阳 雍景豪城</text>
+    </navigator>
+  </view>
+  <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/gallery/gallery">
+      <image src="../images/decoration_pic2.png" class="slider_image"></image>
+      
+      <text class="text">60㎡/简约/一居/半包</text>
+      <text class="text_small">辽宁沈阳 雍景豪城</text>
+    </navigator>
+  </view>
+   <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/gallery/gallery">
+      <image src="../images/decoration_pic1.png" class="slider_image"></image>
+      
+      <text class="text">60㎡/简约/一居/半包</text>
+      <text class="text_small">辽宁沈阳 雍景豪城</text>
+    </navigator>
+  </view>
+</scroll-view>
+ </view>
+ <view class="case">
+  <view class="case_title">
+    <text>装修攻略</text>
+    <navigator url="../decoration/guide/guide">更多></navigator>
+  </view>
+  <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" class="cases_scroll">
+    <!--  display: inline-block-->
+  <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+   <navigator url="../decoration/guide/guide">
+    <image src="../images/decoration_pic3.png" class="slider_image"></image>
+    <image src="../images/tab_gerenzhongxin_btn_select@2x.png" class="user_pic"></image>
+    <text class="text" style="display:inline-block;vertical-align:top">30㎡/单身公寓</text>
+   </navigator>
+  </view>
+  <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/guide/guide">
+    <image src="../images/decoration_pic2.png" class="slider_image"></image>
+    <image src="../images/tab_gerenzhongxin_btn_select@2x.png" class="user_pic"></image>
+    <text class="text" style="display:inline-block;vertical-align:top">70㎡/简约</text>
+   </navigator>
+  </view>
+  <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/guide/guide">
+    <image src="../images/decoration_pic1.png" class="slider_image"></image>
+    <image src="../images/tab_gerenzhongxin_btn_select@2x.png" class="user_pic"></image>
+    <text class="text" style="display:inline-block;vertical-align:top">60㎡/二居/一室</text>
+   </navigator>
+  </view>
+  <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+    <navigator url="../decoration/guide/guide">
+    <image src="../images/decoration_pic4.png" class="slider_image"></image>
+    <image src="../images/tab_gerenzhongxin_btn_select@2x.png" class="user_pic"></image>
+    <text class="text" style="display:inline-block;vertical-align:top">60㎡/简约/一居/半包</text>
+   </navigator>
+  </view>
+  <view style="width: 200px; height: 125px; display: inline-block" class="case_scroll" >
+   <navigator url="../decoration/guide/guide">
+    <image src="../images/decoration_pic5.png" class="slider_image"></image>
+    <image src="../images/tab_gerenzhongxin_btn_select@2x.png" class="user_pic"></image>
+    <text class="text" style="display:inline-block;vertical-align:top">60㎡/简约/一居/半包</text>
+   </navigator>
+  </view>
+</scroll-view>
+ </view>
+ </view>
+</view>

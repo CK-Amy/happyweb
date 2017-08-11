@@ -1,0 +1,114 @@
+
+ <view class="page__bd">
+    <view class="section section_gap swiper">
+      <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" 
+        duration="{{duration}}">
+        <block wx:for="{{background}}">
+          <swiper-item>
+            <view class="swiper-item bc_{{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+</view>
+
+ <view class="btn-area">
+       <button type="default" bindtap="changeIndicatorDots">
+       显示/取消指示点</button>
+       <button type="default" bindtap="changeVertical">
+       {{vertical?'横显示':'竖显示'}}</button>
+       <button type="default" bindtap="changeAutoplay">
+       开始/停止轮播</button>
+     <slider bindchange="durationChange" value="{{duration}}"
+     show-value min="200" max="2000"/>
+     <view class="section__title">轮播一次的时间duration</view>
+     <slider bindchange="intervalChange" value="{{interval}}"
+     show-value min="1000" max="10000"/>
+     <view class="section__title">间隔多长时间显示下一个图interval</view>
+ </view>
+
+    <button bindtap="listenervideoButton">点击显示视频组件</button>
+
+    <video src="F:/Mywebbasic/weixin/day02-all/20170606/hello/pages/resource/1.mp4" style="width:100%;height:100%"
+                hidden="{{hiddenVideo}}" binderror="listenerVideo"/>
+
+ <!--<scroll-view scroll-y="true" style="height: 200px">
+    <view style="background: red; width: 100px; height: 100px" >红</view>
+    <view style="background: green; width: 100px; height: 100px">绿</view>
+    <view style="background: blue; width: 100px; height: 100px">蓝</view>
+    <view style="background: yellow; width: 100px; height: 100px">黄</view>
+  </scroll-view>-->
+  <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex;text-align:center;" >
+    <!--  display: inline-block-->
+    <view style="background: red; width: 200px; height: 100px; display: inline-block">红</view>
+    <view style="background: green; width: 200px; height: 100px; display: inline-block">绿</view>
+    <view style="background: blue; width: 200px; height: 100px; display: inline-block">蓝</view>
+    <view style="background: yellow; width: 200px; height: 100px; display: inline-block">黄</view>
+  </scroll-view>
+
+  <progress active="true" color="red" show-info="true" percent="80" stroke-width="6"/>
+
+ <view>
+    <form bindsumit="listenFormSubmit" bindreset="listenFormReset">
+        <checkbox-group name="checkbox" bindchange="listenCheckboxChange">
+              <label style="display:flex" wx:for-items="{{items}}">
+                    <checkbox value="{{items.name}}" checked="{{item.checked}}"/>{{item.value}}
+              </label>
+        </checkbox-group>
+        <button formType="submit"type="primary">提交</button>
+        <button formType="reset"type="warn">重置</button>
+    </form>
+ </view>
+
+ 
+ <view>普通选择器</view>
+ <!--mode默认selector range数据源value选择的index bindchange事件监听-->
+ <picker mode="selector" range="{{array}}" value="index" bindchange="listenerPickerSelected">
+
+    <text>{{array[index]}}</text>
+ </picker>
+
+ <view>时间选择器</view>
+ <picker mode="time" value="{{time}}" start="06:00" end="24:00" bindchange="listenerTimePickerSelected">
+     <text>{{time}}</text>
+ </picker>
+
+ <view>日期选择器</view>
+ <picker mode="date" value="{{date}}" start="2016-09-26" end="2017-10-10" bindchange="listenerDatePickerSelected">
+     <text>{{date}}</text>
+ </picker>
+
+ <!--switch类型开关-->
+ <view>switch类型开关</view>
+ <switch type="switch" checked="true" bindchange="listenerSwitch"/>
+
+ <!--checkbox类型开关-->
+ <view>checkbox类型开关</view>
+ <switch type="checkbox" bindchange="listenerCheckboxSwitch" />
+
+
+  <!--触发action-sheet事件-->
+  <button type="primary" bindtap="listenerButton">弹出ActionSheet</button>
+  <!--默认action-sheet为隐藏，由button触发-->
+  <action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" >
+
+      <block wx:for-items="{{actionSheetItems}}" >
+          <action-sheet-item >
+            <navigator url="../logs/logs">登录</navigator>
+          </action-sheet-item>
+          <action-sheet-item >注册</action-sheet-item>
+      </block>
+      <!--自动隐藏action-sheet-->
+      <action-sheet-cancel>取消</action-sheet-cancel>
+  </action-sheet>
+
+
+  <!--点击button触发toast-->
+  <button type="primary" bindtap="listenerButton">点击显示toast</button>
+  <!--toast消息框显示3秒，并绑定事件-->
+  <toast hidden="{{hiddenToast}}" duration="3000" bindchange="toastHidden" >OK!</toast>
+
+  <button type="primary" bindtap="listenerButton">显示loading</button>
+  <!--默认隐藏-->
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>

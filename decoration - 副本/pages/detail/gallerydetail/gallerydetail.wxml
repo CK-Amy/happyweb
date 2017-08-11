@@ -1,0 +1,20 @@
+<!--pages/detail/gallerydetail/gallerydetail.wxml-->
+<view class="container" style="height:100%;">
+  <view class="gallery">
+    <view class="gallery_middle">
+      <image src="../../images/decoration_pic5.png" class="gallery_pic"></image>
+    </view>
+    <view class="gallery_bottom">
+      <view class="case_text">
+        <image src="../../images/tab_gerenzhongxin_btn_select@2x.png" class="user_pic"></image>
+        <text class="text">设计师太合麦田设计--大连亿达青云天下示范单位72㎡</text>
+      </view>
+
+      <navigator url="url">
+        <view class="findhim">
+          找他设计
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+/* pages/dan/danConfirm/confirm.wxss */
+
+.findhim{
+  height:100rpx;
+  line-height:100rpx;
+  width:100%;
+  background: #7ADBEC;
+  position:fixed;
+  bottom:0px;
+  text-align:center;
+  /*_position:absolute;*/
+}
